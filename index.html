@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO & Brand Metadata -->
+  <title>Sourav (asitis.sourav) — Creative Technologist & Visual Architect</title>
+  <meta name="description" content="Official personal portfolio of Sourav (asitis.sourav). Dark cinematic digital experiences, creative technology, architectural systems, and unfiltered visual art.">
+  <meta name="keywords" content="Sourav, asitis.sourav, Creative Developer, Visual Designer, Portfolio, Dark Futuristic, WebGL, UI UX, Digital Architecture">
+  <meta name="author" content="Sourav Debnath">
+  
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sourav (asitis.sourav) — Digital Architect & Creative Technologist">
+  <meta property="og:description" content="Cinematic experiences at the intersection of code, art, and future systems.">
+  <meta property="twitter:card" content="summary_large_image">
+
+  <!-- Favicon / Tab Glyph -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2306070a'/%3E%3Ccircle cx='50' cy='50' r='30' stroke='%2300f0ff' stroke-width='6' fill='none'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%238b5cf6'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Syne, Space Grotesk, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Film Grain Overlay -->
+  <div class="cinematic-grain" aria-hidden="true"></div>
+
+  <!-- Interactive Cosmic Nebula & Starfield Canvas -->
+  <canvas id="cosmicCanvas" class="cosmic-canvas" aria-hidden="true"></canvas>
+
+  <!-- Dynamic Ambient Glowing Nebulae -->
+  <div class="ambient-nebula nebula-cyan" aria-hidden="true"></div>
+  <div class="ambient-nebula nebula-violet" aria-hidden="true"></div>
+
+  <!-- Custom Cinematic Magnetic Cursor -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-follower" aria-hidden="true"></div>
+
+  <!-- Primary Site Wrapper -->
+  <div class="site-wrapper">
+
+    <!-- ====================================================================
+         Header & Navigation Bar
+         ==================================================================== -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-inner">
+          
+          <!-- Brand Logo -->
+          <a href="#hero" class="brand-logo" aria-label="Sourav Homepage">
+            <span class="brand-glyph">S</span>
+            <span>asitis.<span class="brand-sub">sourav</span></span>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav aria-label="Primary Navigation">
+            <ul class="nav-links">
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#work" class="nav-link">Work</a></li>
+              <li><a href="#channels" class="nav-link">Channels</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Header Utilities -->
+          <div class="nav-actions">
+            <!-- Telemetry Live Time -->
+            <div class="telemetry-time" title="Current Local Time">
+              <span>LOC:</span>
+              <span id="liveClock" class="time-val">00:00:00 IST</span>
+            </div>
+
+            <!-- Web Audio Synthesizer Toggle -->
+            <button id="audioToggle" class="audio-toggle-btn" aria-label="Toggle Sound Ambience" title="Toggle Futuristic Audio FX">
+              <span class="audio-bars">
+                <span class="audio-bar"></span>
+                <span class="audio-bar"></span>
+                <span class="audio-bar"></span>
+              </span>
+              <span>SFX</span>
+            </button>
+
+            <!-- Command Palette Shortcut Trigger -->
+            <button class="cmd-palette-btn cmd-trigger" aria-label="Open Command Palette" title="Command Palette (Ctrl + K)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>HUD</span>
+              <kbd class="cmd-kbd">⌘K</kbd>
+            </button>
+
+            <!-- Mobile Nav Toggle Hamburger -->
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link"><span class="num">00</span> Index</a></li>
+        <li><a href="#about" class="mobile-nav-link"><span class="num">01</span> About Me</a></li>
+        <li><a href="#work" class="mobile-nav-link"><span class="num">02</span> Featured Work</a></li>
+        <li><a href="#channels" class="mobile-nav-link"><span class="num">03</span> Channels</a></li>
+        <li><a href="#contact" class="mobile-nav-link"><span class="num">04</span> Transmission</a></li>
+      </ul>
+      <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-tertiary);">
+        // AS IT IS - SOURAV
+      </div>
+    </div>
+
+    <main>
+      <!-- ==================================================================
+           Hero Section - Cinematic Centerpiece
+           ================================================================== -->
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            
+            <!-- Left Hero Content -->
+            <div class="hero-content">
+              
+              <div class="hero-badge-wrap">
+                <div class="hud-pill">
+                  <span class="pulse-dot"></span>
+                  <span>SYS.STATUS: ONLINE</span>
+                </div>
+                <div class="hud-pill">
+                  <span>BRAND: ASITIS.SOURAV</span>
+                </div>
+              </div>
+
+              <h1 class="hero-headline">
+                CRAFTING <span class="text-gradient-cyan">CINEMATIC</span> DIGITAL SYSTEMS <span class="text-gradient-violet">AS IT IS.</span>
+              </h1>
+
+              <p class="hero-subhead">
+                Creative Technologist, Visual Architect & Digital Director. Engineering raw, immersive web experiences, generative systems, and minimal editorial aesthetics without compromise.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#work" class="btn-primary">
+                  <span>Explore Featured Work</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="#contact" class="btn-secondary">
+                  <span>Initiate Transmission</span>
+                </a>
+              </div>
+
+              <!-- Live Telemetry Stats Strip -->
+              <div class="hero-metrics">
+                <div class="metric-item">
+                  <div class="metric-val">07<span class="metric-accent">+</span></div>
+                  <div class="metric-label">Years of Craft</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">50<span class="metric-accent">+</span></div>
+                  <div class="metric-label">Shipped Artifacts</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">100<span class="metric-accent">K</span></div>
+                  <div class="metric-label">Global Community</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">99.9<span class="metric-accent">%</span></div>
+                  <div class="metric-label">Visual Precision</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Hero Visual Hologram HUD Element -->
+            <div class="hero-visual">
+              <div class="hud-card-container">
+                <div class="hud-scanline"></div>
+
+                <!-- Floating Hologram Badges -->
+                <div class="hud-floating-pill pill-top-right">
+                  <span>● FREQ: 432Hz // CORE ACTIVE</span>
+                </div>
+                <div class="hud-floating-pill pill-bottom-left">
+                  <span>[ 22.57° N, 88.36° E ]</span>
+                </div>
+
+                <!-- Card Top Telemetry -->
+                <div class="hud-top-bar">
+                  <span>TERMINAL // 01</span>
+                  <span>AUTONOMOUS NODE</span>
+                </div>
+
+                <!-- Central Kinetic Hologram Monogram -->
+                <div class="hud-target-symbol">
+                  <div class="orbit-ring orbit-1"></div>
+                  <div class="orbit-ring orbit-2"></div>
+                  <div class="hud-core-monogram">S</div>
+                </div>
+
+                <!-- Card Bottom Telemetry -->
+                <div class="hud-bottom-telemetry">
+                  <div class="telemetry-row">
+                    <span class="telemetry-label">OPERATOR:</span>
+                    <span class="telemetry-value">SOURAV (asitis.sourav)</span>
+                  </div>
+                  <div class="telemetry-row">
+                    <span class="telemetry-label">SPECIALTY:</span>
+                    <span class="telemetry-value accent">CREATIVE TECH & ART</span>
+                  </div>
+                  <div class="telemetry-row">
+                    <span class="telemetry-label">FRAMEWORK:</span>
+                    <span class="telemetry-value">VANILLA ARCHITECTURE</span>
+                  </div>
+                  <div class="telemetry-row">
+                    <span class="telemetry-label">STATUS:</span>
+                    <span class="telemetry-value" style="color: var(--accent-emerald);">OPEN FOR SELECT WORK</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#about" class="hero-scroll-cue" aria-label="Scroll Down to About Section">
+          <span>DESCENT</span>
+          <div class="scroll-indicator-line"></div>
+        </a>
+      </section>
+
+
+      <!-- ==================================================================
+           About Me Section - Ethos, Narrative & Disciplines
+           ================================================================== -->
+      <section id="about" class="about-section section-padding">
+        <div class="container">
+          
+          <div class="about-grid">
+            
+            <!-- Left: Holographic Identity Card -->
+            <div class="profile-cinematic-card">
+              <div class="profile-avatar-frame">
+                <!-- Generative Cyber Aesthetic Vector Avatar -->
+                <div class="profile-avatar-placeholder">
+                  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="85" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6"/>
+                    <circle cx="100" cy="80" r="35" stroke="currentColor" stroke-width="2.5"/>
+                    <path d="M45 160C55 125 75 115 100 115C125 115 145 125 155 160" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="100" cy="100" r="4" fill="var(--accent-cyan)"/>
+                    <line x1="100" y1="20" x2="100" y2="40" stroke="var(--accent-cyan)" stroke-width="2"/>
+                    <line x1="100" y1="160" x2="100" y2="180" stroke="var(--accent-cyan)" stroke-width="2"/>
+                  </svg>
+                  <span style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; margin-top: 0.75rem; color: var(--accent-cyan);">// IDENTITY MATRIX</span>
+                </div>
+                <div class="profile-badge-overlay">
+                  <span class="hud-pill"><span class="pulse-dot"></span> AVAILABLE</span>
+                </div>
+              </div>
+
+              <div class="profile-identity">
+                <h3 class="profile-name">Sourav</h3>
+                <div class="profile-handle">@asitis.sourav</div>
+              </div>
+
+              <p class="profile-statement">
+                Bridging deep technical craftsmanship with high-fashion cinematic aesthetics. Obsessed with performance, clean fundamentals, and visceral digital design.
+              </p>
+
+              <div class="profile-quick-facts">
+                <div class="quick-fact-row">
+                  <span class="fact-label">LOCATION:</span>
+                  <span class="fact-val">Kolkata, IN / Remote Worldwide</span>
+                </div>
+                <div class="quick-fact-row">
+                  <span class="fact-label">CORE FOCUS:</span>
+                  <span class="fact-val">Full-Stack Creative Tech</span>
+                </div>
+                <div class="quick-fact-row">
+                  <span class="fact-label">FOUNDATION:</span>
+                  <span class="fact-val">HTML5 / Modern CSS / Pure JS</span>
+                </div>
+                <div class="quick-fact-row">
+                  <span class="fact-label">LANGUAGES:</span>
+                  <span class="fact-val">English, Bengali, Hindi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: The Manifesto & Capability Matrix -->
+            <div class="about-narrative">
+              <div class="section-meta">SYS // 01 — IDENTITY & ETHOS</div>
+              <h2 class="section-title">
+                THE PHILOSOPHY OF <br>
+                <span class="glow-text">"AS IT IS"</span>
+              </h2>
+
+              <div class="ethos-quote-box">
+                <p>
+                  "No superfluous bloat. No fake veneer. Presenting digital systems in their purest, most potent form—unfiltered, kinetic, and razor-sharp. Exactly as it is."
+                </p>
+                <span class="ethos-author">— SOURAV DEBNATH</span>
+              </div>
+
+              <p class="about-body-text">
+                I am a creative technologist, visual designer, and digital brand builder working under the moniker <strong>asitis.sourav</strong>. My practice thrives in the sweet spot between engineering rigor and cinematic storytelling. Whether designing spatial interfaces, crafting interactive generative canvases, or publishing thoughtful media breakdowns, my goal is always to provoke awe and deliver impeccable functionality.
+              </p>
+
+              <p class="about-body-text">
+                I reject the bloated trends of cookie-cutter templates. Instead, every interaction is sculpted with bespoke code, responsive typography, and tactile feedback.
+              </p>
+
+              <!-- Core Disciplines -->
+              <h3 class="disciplines-title">CORE DISCIPLINES</h3>
+              <div class="disciplines-grid">
+                
+                <div class="discipline-card">
+                  <div class="discipline-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                  </div>
+                  <h4 class="discipline-name">Creative Engineering</h4>
+                  <p class="discipline-desc">
+                    Vanilla JS micro-frameworks, WebGL shaders, Canvas particle simulations, and high-performance frontend architecture.
+                  </p>
+                </div>
+
+                <div class="discipline-card">
+                  <div class="discipline-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                  </div>
+                  <h4 class="discipline-name">Dark Cinematic UI/UX</h4>
+                  <p class="discipline-desc">
+                    Futuristic HUD interfaces, spatial layouts, precision typography hierarchies, and buttery 60fps micro-interactions.
+                  </p>
+                </div>
+
+                <div class="discipline-card">
+                  <div class="discipline-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M23 7l-7 5 7 5V7z"></path>
+                      <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                    </svg>
+                  </div>
+                  <h4 class="discipline-name">Visual & Motion Direction</h4>
+                  <p class="discipline-desc">
+                    Cinematic video editing, 3D asset staging, brand identity design, and narrative-driven scrollytelling experiences.
+                  </p>
+                </div>
+
+                <div class="discipline-card">
+                  <div class="discipline-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                  </div>
+                  <h4 class="discipline-name">Brand & Content Strategy</h4>
+                  <p class="discipline-desc">
+                    Multi-platform content creation across YouTube, Instagram, and technical publications. High-retention visual assets.
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Tech & Weaponry Tags -->
+              <div class="skills-matrix-wrap">
+                <span class="section-meta" style="font-size: 0.72rem;">SYS.MATRIX // REPERTOIRE</span>
+                <div class="skills-tags">
+                  <span class="skill-tag">HTML5 Semantic</span>
+                  <span class="skill-tag">CSS3 / Grid & Flexbox</span>
+                  <span class="skill-tag">Vanilla JavaScript (ES6+)</span>
+                  <span class="skill-tag">WebGL / Canvas 2D</span>
+                  <span class="skill-tag">Web Audio API</span>
+                  <span class="skill-tag">Responsive Mobile First</span>
+                  <span class="skill-tag">Performance Tuning</span>
+                  <span class="skill-tag">SVG Animation</span>
+                  <span class="skill-tag">Typography Systems</span>
+                  <span class="skill-tag">Motion Design</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ==================================================================
+           Featured Work Section - Projects Showcase & Filter System
+           ================================================================== -->
+      <section id="work" class="work-section section-padding">
+        <div class="container">
+          
+          <div class="work-header-wrap">
+            <div>
+              <div class="section-meta">SYS // 02 — ARTIFACTS & CASE STUDIES</div>
+              <h2 class="section-title">
+                FEATURED <span class="glow-text">WORKS</span>
+              </h2>
+              <p class="section-desc">
+                A curated selection of high-fidelity projects spanning spatial software, interactive web audio experiments, and luxury editorial design.
+              </p>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="work-filters" role="tablist" aria-label="Project Categories">
+              <button class="filter-btn active" data-filter="all">ALL [06]</button>
+              <button class="filter-btn" data-filter="tech">CREATIVE TECH</button>
+              <button class="filter-btn" data-filter="architecture">ARCHITECTURE</button>
+              <button class="filter-btn" data-filter="cinematics">CINEMATICS</button>
+            </div>
+          </div>
+
+          <!-- Project Cards Grid -->
+          <div class="projects-grid">
+            
+            <!-- Project 01: NEBULA OS -->
+            <article class="project-card" data-category="tech" data-id="nebula-os">
+              <div class="project-media-frame">
+                <!-- Generative High-Tech SVG Thumbnail -->
+                <svg class="project-thumbnail-art" viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="600" height="340" fill="#080b12"/>
+                  <circle cx="300" cy="170" r="110" stroke="rgba(0, 240, 255, 0.2)" stroke-width="1.5" stroke-dasharray="4 8"/>
+                  <circle cx="300" cy="170" r="70" stroke="rgba(139, 92, 246, 0.3)" stroke-width="2"/>
+                  <rect x="220" y="110" width="160" height="120" rx="8" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5" fill="rgba(0, 240, 255, 0.03)"/>
+                  <line x1="120" y1="170" x2="480" y2="170" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+                  <line x1="300" y1="40" x2="300" y2="300" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+                  <text x="300" y="175" fill="#00f0ff" font-family="monospace" font-size="12" text-anchor="middle" letter-spacing="4">NEBULA_OS.SYS</text>
+                </svg>
+                <div class="project-badge-tag">SPATIAL UI</div>
+                <div class="project-year-tag">2026</div>
+              </div>
+              <div class="project-info">
+                <div class="project-category">Creative Tech // Architecture</div>
+                <h3 class="project-title">
+                  NEBULA OS — Spatial Desktop Interface
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </h3>
+                <p class="project-summary">
+                  A high-performance browser-based spatial workstation combining zero-latency window physics, dynamic shader backdrops, and ambient audio synthesizer.
+                </p>
+                <div class="project-tech-stack">
+                  <span class="tech-chip">TypeScript</span>
+                  <span class="tech-chip">WebGL</span>
+                  <span class="tech-chip">GLSL</span>
+                  <span class="tech-chip">WebAudio</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 02: CHRONOVOID -->
+            <article class="project-card" data-category="cinematics" data-id="chronovoid">
+              <div class="project-media-frame">
+                <svg class="project-thumbnail-art" viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="600" height="340" fill="#0b0813"/>
+                  <path d="M150 240 Q 300 40 450 240" stroke="rgba(139, 92, 246, 0.5)" stroke-width="2" fill="none"/>
+                  <path d="M180 240 Q 300 80 420 240" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5" fill="none"/>
+                  <circle cx="300" cy="140" r="30" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="1.5"/>
+                  <text x="300" y="290" fill="#8b5cf6" font-family="monospace" font-size="12" text-anchor="middle" letter-spacing="4">AUDIO_REACTIVE.FFT</text>
+                </svg>
+                <div class="project-badge-tag">AUDIO-VISUAL</div>
+                <div class="project-year-tag">2025</div>
+              </div>
+              <div class="project-info">
+                <div class="project-category">Cinematics // Creative Tech</div>
+                <h3 class="project-title">
+                  CHRONOVOID — Audio-Reactive Odyssey
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </h3>
+                <p class="project-summary">
+                  Live FFT audio frequency analyzer morphing real-time volumetric geometries and particulate fluid clouds synchronized to electronic soundscapes.
+                </p>
+                <div class="project-tech-stack">
+                  <span class="tech-chip">Vanilla JS</span>
+                  <span class="tech-chip">Web Audio API</span>
+                  <span class="tech-chip">Canvas 2D</span>
+                  <span class="tech-chip">Mathematics</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 03: AURA ARCHIVE -->
+            <article class="project-card" data-category="architecture" data-id="aura-archive">
+              <div class="project-media-frame">
+                <svg class="project-thumbnail-art" viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="600" height="340" fill="#090a0f"/>
+                  <line x1="80" y1="60" x2="520" y2="60" stroke="rgba(255, 255, 255, 0.15)"/>
+                  <line x1="80" y1="280" x2="520" y2="280" stroke="rgba(255, 255, 255, 0.15)"/>
+                  <text x="300" y="160" fill="#ffffff" font-family="serif" font-size="28" font-style="italic" text-anchor="middle">A U R A</text>
+                  <text x="300" y="200" fill="#00f0ff" font-family="monospace" font-size="11" text-anchor="middle" letter-spacing="6">ISSUE 04 // EDITORIAL</text>
+                </svg>
+                <div class="project-badge-tag">EDITORIAL</div>
+                <div class="project-year-tag">2025</div>
+              </div>
+              <div class="project-info">
+                <div class="project-category">Digital Architecture // Visual Design</div>
+                <h3 class="project-title">
+                  AURA ARCHIVE — High-Fashion Editorial Hub
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </h3>
+                <p class="project-summary">
+                  Minimalist high-fashion publication showcasing modern brutalist typography, magnetic cursor gestures, and progressive image optimization.
+                </p>
+                <div class="project-tech-stack">
+                  <span class="tech-chip">Modern CSS</span>
+                  <span class="tech-chip">Fluid Type</span>
+                  <span class="tech-chip">Micro-Interactions</span>
+                  <span class="tech-chip">Clean Code</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 04: SYNAPSE AI -->
+            <article class="project-card" data-category="tech" data-id="synapse-ai">
+              <div class="project-media-frame">
+                <svg class="project-thumbnail-art" viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="600" height="340" fill="#06090e"/>
+                  <path d="M100 170 H 500" stroke="rgba(0, 240, 255, 0.2)" stroke-width="1"/>
+                  <circle cx="200" cy="170" r="18" fill="rgba(0, 240, 255, 0.1)" stroke="#00f0ff" stroke-width="1.5"/>
+                  <circle cx="300" cy="120" r="22" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="1.5"/>
+                  <circle cx="400" cy="170" r="18" fill="rgba(139, 92, 246, 0.1)" stroke="#8b5cf6" stroke-width="1.5"/>
+                  <line x1="218" y1="170" x2="280" y2="130" stroke="#00f0ff" stroke-width="1.5"/>
+                  <line x1="320" y1="130" x2="382" y2="170" stroke="#10b981" stroke-width="1.5"/>
+                  <text x="300" y="270" fill="#10b981" font-family="monospace" font-size="11" text-anchor="middle" letter-spacing="4">NEURAL_TELEMETRY.RUN</text>
+                </svg>
+                <div class="project-badge-tag">AI SYSTEMS</div>
+                <div class="project-year-tag">2025</div>
+              </div>
+              <div class="project-info">
+                <div class="project-category">Creative Tech // System Design</div>
+                <h3 class="project-title">
+                  SYNAPSE AI — Neural Telemetry Cockpit
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </h3>
+                <p class="project-summary">
+                  Real-time autonomous model inference monitor, token stream metrics dashboard, and graph visualization for multi-agent swarm pipelines.
+                </p>
+                <div class="project-tech-stack">
+                  <span class="tech-chip">SVG Data Viz</span>
+                  <span class="tech-chip">Vanilla JS</span>
+                  <span class="tech-chip">Dark HUD</span>
+                  <span class="tech-chip">WebSockets</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 05: OBSIDIAN LABS -->
+            <article class="project-card" data-category="cinematics" data-id="obsidian-labs">
+              <div class="project-media-frame">
+                <svg class="project-thumbnail-art" viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="600" height="340" fill="#080a0f"/>
+                  <circle cx="300" cy="170" r="90" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+                  <ellipse cx="300" cy="170" rx="140" ry="50" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1.5"/>
+                  <circle cx="300" cy="170" r="6" fill="#00f0ff"/>
+                  <text x="300" y="270" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="middle" letter-spacing="4">ACOUSTIC_EXPLODED.3D</text>
+                </svg>
+                <div class="project-badge-tag">HARDWARE 3D</div>
+                <div class="project-year-tag">2024</div>
+              </div>
+              <div class="project-info">
+                <div class="project-category">Cinematics // Visual Design</div>
+                <h3 class="project-title">
+                  OBSIDIAN LABS — Hardware Microsite
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </h3>
+                <p class="project-summary">
+                  Futuristic product presentation featuring 360-degree exploded hardware views, acoustic frequency previews, and scroll-triggered lighting transitions.
+                </p>
+                <div class="project-tech-stack">
+                  <span class="tech-chip">Scrollytelling</span>
+                  <span class="tech-chip">3D Views</span>
+                  <span class="tech-chip">Audio Preview</span>
+                  <span class="tech-chip">CSS Keyframes</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 06: ECHOES OF TOMORROW -->
+            <article class="project-card" data-category="cinematics" data-id="echoes-film">
+              <div class="project-media-frame">
+                <svg class="project-thumbnail-art" viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="600" height="340" fill="#09070c"/>
+                  <line x1="60" y1="170" x2="540" y2="170" stroke="rgba(244, 63, 94, 0.4)" stroke-width="2"/>
+                  <rect x="250" y="130" width="100" height="80" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1.5" fill="rgba(244, 63, 94, 0.05)"/>
+                  <polygon points="295,160 295,180 315,170" fill="#f43f5e"/>
+                  <text x="300" y="270" fill="#f43f5e" font-family="monospace" font-size="11" text-anchor="middle" letter-spacing="4">CYBERPUNK_ARG.LOG</text>
+                </svg>
+                <div class="project-badge-tag">INTERACTIVE ARG</div>
+                <div class="project-year-tag">2024</div>
+              </div>
+              <div class="project-info">
+                <div class="project-category">Cinematics // Creative Tech</div>
+                <h3 class="project-title">
+                  ECHOES OF TOMORROW — Sci-Fi Experience
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </h3>
+                <p class="project-summary">
+                  An interactive alternate reality teaser allowing fans to decrypt simulated dystopian transmissions, discover hidden audio logs, and preview the film.
+                </p>
+                <div class="project-tech-stack">
+                  <span class="tech-chip">Vanilla JS</span>
+                  <span class="tech-chip">Video API</span>
+                  <span class="tech-chip">Glitch Audio</span>
+                  <span class="tech-chip">Story Engine</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ==================================================================
+           Content Links Section - The Ecosystem Hub
+           ================================================================== -->
+      <section id="channels" class="content-section section-padding">
+        <div class="container">
+          
+          <div class="section-meta">SYS // 03 — MEDIA DISPATCHES & CHANNELS</div>
+          <h2 class="section-title">
+            CONTENT <span class="glow-text">ECOSYSTEM</span>
+          </h2>
+          <p class="section-desc">
+            Direct access to my dispatches, code repositories, cinematic edits, essays, and digital community spaces across the web.
+          </p>
+
+          <div class="content-grid">
+            
+            <!-- Channel 1: YouTube -->
+            <a href="https://youtube.com/@asitis.sourav" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                  </svg>
+                </div>
+                <span class="channel-badge">VIDEO / 4K</span>
+              </div>
+              <div class="channel-main">
+                <h3 class="channel-name">YouTube</h3>
+                <span class="channel-handle">@asitis.sourav</span>
+                <p class="channel-desc">Cinematic devlogs, creative coding deep-dives, and visual aesthetic breakdowns.</p>
+              </div>
+              <div class="channel-footer">
+                <span class="channel-stat">● 45K+ Subs</span>
+                <span class="channel-action-link">Watch ↗</span>
+              </div>
+            </a>
+
+            <!-- Channel 2: Instagram -->
+            <a href="https://instagram.com/asitis.sourav" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <span class="channel-badge">VISUALS</span>
+              </div>
+              <div class="channel-main">
+                <h3 class="channel-name">Instagram</h3>
+                <span class="channel-handle">@asitis.sourav</span>
+                <p class="channel-desc">Daily design snippets, 3D explorations, typography studies, and unfiltered life.</p>
+              </div>
+              <div class="channel-footer">
+                <span class="channel-stat">● 32K+ Community</span>
+                <span class="channel-action-link">Explore ↗</span>
+              </div>
+            </a>
+
+            <!-- Channel 3: GitHub -->
+            <a href="https://github.com/asitis-sourav" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </div>
+                <span class="channel-badge">OPEN SOURCE</span>
+              </div>
+              <div class="channel-main">
+                <h3 class="channel-name">GitHub</h3>
+                <span class="channel-handle">@asitis-sourav</span>
+                <p class="channel-desc">Vanilla JS experiments, shader boilerplates, micro-libraries, and production code.</p>
+              </div>
+              <div class="channel-footer">
+                <span class="channel-stat">● 1.2K+ Stars</span>
+                <span class="channel-action-link">Inspect ↗</span>
+              </div>
+            </a>
+
+            <!-- Channel 4: X / Twitter -->
+            <a href="https://x.com/asitis_sourav" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                  </svg>
+                </div>
+                <span class="channel-badge">STREAM</span>
+              </div>
+              <div class="channel-main">
+                <h3 class="channel-name">X (Twitter)</h3>
+                <span class="channel-handle">@asitis_sourav</span>
+                <p class="channel-desc">Raw thoughts on creative technology, future interfaces, AI tools, and minimalism.</p>
+              </div>
+              <div class="channel-footer">
+                <span class="channel-stat">● Live Feed</span>
+                <span class="channel-action-link">Follow ↗</span>
+              </div>
+            </a>
+
+            <!-- Channel 5: Substack / Editorial -->
+            <a href="https://asitissourav.substack.com" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 6h16M4 12h16M4 18l8-6 8 6"></path>
+                  </svg>
+                </div>
+                <span class="channel-badge">ESSAYS</span>
+              </div>
+              <div class="channel-main">
+                <h3 class="channel-name">Substack</h3>
+                <span class="channel-handle">The Asitis Manifesto</span>
+                <p class="channel-desc">Longform reflections on digital minimalism, agency philosophy, and craft.</p>
+              </div>
+              <div class="channel-footer">
+                <span class="channel-stat">● Bi-Weekly</span>
+                <span class="channel-action-link">Read ↗</span>
+              </div>
+            </a>
+
+            <!-- Channel 6: Spotify / Soundscapes -->
+            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 11.5c3.5-1 7.5-.5 10 1"></path>
+                    <path d="M9 14.5c2.5-.8 5.5-.3 7.5.8"></path>
+                    <path d="M10 17.5c1.8-.5 3.8-.2 5.2.5"></path>
+                  </svg>
+                </div>
+                <span class="channel-badge">SOUNDTRACK</span>
+              </div>
+              <div class="channel-main">
+                <h3 class="channel-name">Spotify</h3>
+                <span class="channel-handle">Curated Frequencies</span>
+                <p class="channel-desc">Dystopian ambient, modular synthesizer drone, and hyper-focus focus playlists.</p>
+              </div>
+              <div class="channel-footer">
+                <span class="channel-stat">● 12 Playlists</span>
+                <span class="channel-action-link">Listen ↗</span>
+              </div>
+            </a>
+
+            <!-- Channel 7: LinkedIn -->
+            <a href="https://linkedin.com/in/sourav-debnath" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <span class="channel-badge">NETWORK</span>
+              </div>
+              <div class="channel-main">
+                <h3 class="channel-name">LinkedIn</h3>
+                <span class="channel-handle">Sourav Debnath</span>
+                <p class="channel-desc">Professional journey, leadership collaborations, and engineering updates.</p>
+              </div>
+              <div class="channel-footer">
+                <span class="channel-stat">● Professional</span>
+                <span class="channel-action-link">Connect ↗</span>
+              </div>
+            </a>
+
+            <!-- Channel 8: Discord / Guild -->
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <div class="channel-header">
+                <div class="channel-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6h0a14.5 14.5 0 0 0-4-1.2 10.6 10.6 0 0 0-.5 1.1 13.9 13.9 0 0 0-3 0 10.6 10.6 0 0 0-.5-1.1A14.5 14.5 0 0 0 6 6 15.6 15.6 0 0 0 3 18a14.6 14.6 0 0 0 4.5 2.3 11 11 0 0 0 1-1.6 9.6 9.6 0 0 1-1.6-.8l.4-.3a10.8 10.8 0 0 0 9.4 0l.4.3a9.6 9.6 0 0 1-1.6.8 11 11 0 0 0 1 1.6 14.6 14.6 0 0 0 4.5-2.3 15.6 15.6 0 0 0-3-12z"></path>
+                  </svg>
+                </div>
+                <span class="channel-badge">COMMUNITY</span>
+              </div>
+              <div class="channel-main">
+                <h3 class="channel-name">Discord</h3>
+                <span class="channel-handle">The Void Collective</span>
+                <p class="channel-desc">Private creative dev lab, feedback circles, code critiques, and design hangouts.</p>
+              </div>
+              <div class="channel-footer">
+                <span class="channel-stat">● 4.8K Builders</span>
+                <span class="channel-action-link">Join ↗</span>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ==================================================================
+           Contact Section - "Initiate Transmission"
+           ================================================================== -->
+      <section id="contact" class="contact-section section-padding">
+        <div class="container">
+          
+          <div class="contact-grid">
+            
+            <!-- Left: Intel & Coordinates -->
+            <div class="contact-intel">
+              <div>
+                <div class="section-meta">SYS // 04 — DIRECT TRANSMISSION</div>
+                <h2 class="section-title">
+                  INITIATE <br>
+                  <span class="glow-text">COMMUNICATION</span>
+                </h2>
+                <p class="section-desc">
+                  Have an ambitious digital project, creative direction challenge, or high-concept commission? Transmit your coordinates below.
+                </p>
+              </div>
+
+              <!-- Status Console -->
+              <div class="intel-status-card">
+                <div class="intel-status-header">
+                  <span class="intel-status-title">STATUS & AVAILABILITY</span>
+                  <span class="hud-pill"><span class="pulse-dot"></span> ACTIVE</span>
+                </div>
+                <p class="intel-status-desc">
+                  Currently accepting <strong>2 select projects for Q4 & 2027</strong>. Response turnaround guaranteed within 24 hours.
+                </p>
+              </div>
+
+              <!-- Direct Channels -->
+              <div class="direct-channels-list">
+                
+                <div class="direct-channel-item">
+                  <div class="direct-channel-left">
+                    <div class="direct-channel-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </div>
+                    <div class="direct-channel-meta">
+                      <div class="channel-title">Direct Email</div>
+                      <div class="channel-val">contact@asitissourav.com</div>
+                    </div>
+                  </div>
+                  <button class="copy-badge-btn copy-trigger" data-copy="contact@asitissourav.com" aria-label="Copy Email to Clipboard">
+                    Copy
+                  </button>
+                </div>
+
+                <div class="direct-channel-item">
+                  <div class="direct-channel-left">
+                    <div class="direct-channel-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                      </svg>
+                    </div>
+                    <div class="direct-channel-meta">
+                      <div class="channel-title">Telegram Encrypted</div>
+                      <div class="channel-val">@asitis_sourav</div>
+                    </div>
+                  </div>
+                  <a href="https://t.me/asitis_sourav" target="_blank" rel="noopener noreferrer" class="copy-badge-btn">
+                    Chat ↗
+                  </a>
+                </div>
+
+                <div class="direct-channel-item">
+                  <div class="direct-channel-left">
+                    <div class="direct-channel-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                    </div>
+                    <div class="direct-channel-meta">
+                      <div class="channel-title">Direct Call Sync</div>
+                      <div class="channel-val">Schedule 20-min Briefing</div>
+                    </div>
+                  </div>
+                  <a href="https://cal.com" target="_blank" rel="noopener noreferrer" class="copy-badge-btn">
+                    Book ↗
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Right: Interactive Command Console Form -->
+            <div class="transmission-console">
+              <div class="console-header">
+                <div class="console-dots">
+                  <span class="console-dot red"></span>
+                  <span class="console-dot yellow"></span>
+                  <span class="console-dot green"></span>
+                </div>
+                <span>PACKET_ENCRYPTION: AES-256 // SECURE</span>
+              </div>
+
+              <form id="transmissionForm">
+                <div class="form-group">
+                  <label for="senderName" class="form-label">01 // YOUR NAME OR ENTITY</label>
+                  <input type="text" id="senderName" class="form-input" placeholder="e.g. Elena Rostova / Apex Digital" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                  <label for="senderEmail" class="form-label">02 // TRANSMISSION FREQUENCY (EMAIL)</label>
+                  <input type="email" id="senderEmail" class="form-input" placeholder="e.g. elena@apex.design" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                  <label for="senderScope" class="form-label">03 // DIRECTIVE OR CATEGORY</label>
+                  <input type="text" id="senderScope" class="form-input" placeholder="e.g. Brand Platform / WebGL Experience / Creative Direction">
+                </div>
+
+                <div class="form-group">
+                  <label for="senderMessage" class="form-label">04 // TRANSMISSION PAYLOAD (BRIEF / MESSAGE)</label>
+                  <textarea id="senderMessage" class="form-textarea" placeholder="Detail the scope, timeline, budget parameters, and vision..." required></textarea>
+                </div>
+
+                <button type="submit" id="submitTransmissionBtn" class="btn-primary" style="width: 100%;">
+                  <span>INITIATE TRANSMISSION</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+
+                <div id="formStatus" class="form-status-msg" role="status" aria-live="polite"></div>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+
+    <!-- ====================================================================
+         Footer Section - Deep Horizon & Telemetry
+         ==================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        
+        <div class="footer-top-grid">
+          
+          <div class="footer-brand-column">
+            <a href="#hero" class="brand-logo" aria-label="Sourav Homepage">
+              <span class="brand-glyph">S</span>
+              <span>asitis.<span class="brand-sub">sourav</span></span>
+            </a>
+            <p class="footer-manifesto">
+              A high-precision creative technology studio and digital atelier. Championing unfiltered truth, dark cinema, and performance elegance.
+            </p>
+            <div class="hud-pill" style="align-self: flex-start;">
+              <span>CHRONO: 2026 EDITION</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-col-title">NAVIGATION</div>
+            <ul class="footer-nav-list">
+              <li class="footer-nav-item"><a href="#hero">Hero Index</a></li>
+              <li class="footer-nav-item"><a href="#about">About & Ethos</a></li>
+              <li class="footer-nav-item"><a href="#work">Featured Work</a></li>
+              <li class="footer-nav-item"><a href="#channels">Content Hub</a></li>
+              <li class="footer-nav-item"><a href="#contact">Transmission</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">CHANNELS</div>
+            <ul class="footer-nav-list">
+              <li class="footer-nav-item"><a href="https://youtube.com/@asitis.sourav" target="_blank" rel="noopener noreferrer">YouTube ↗</a></li>
+              <li class="footer-nav-item"><a href="https://instagram.com/asitis.sourav" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+              <li class="footer-nav-item"><a href="https://github.com/asitis-sourav" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+              <li class="footer-nav-item"><a href="https://x.com/asitis_sourav" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a></li>
+              <li class="footer-nav-item"><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">SYSTEM</div>
+            <ul class="footer-nav-list">
+              <li class="footer-nav-item"><a href="javascript:void(0)" class="cmd-trigger">Command HUD (⌘K)</a></li>
+              <li class="footer-nav-item"><a href="javascript:void(0)" class="copy-trigger" data-copy="contact@asitissourav.com">Copy Email</a></li>
+              <li class="footer-nav-item"><a href="#work">Filter Works</a></li>
+              <li class="footer-nav-item"><a href="#contact">Direct Sync</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>
+            &copy; 2026 SOURAV DEBNATH (<span style="color: var(--accent-cyan);">asitis.sourav</span>). ALL RIGHTS RESERVED.
+          </div>
+          <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <span>ENGINEERED WITH ZERO FRAMEWORKS</span>
+            <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top">
+              <span>ASCEND</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ====================================================================
+       Project Inspector Lightbox / Modal
+       ==================================================================== -->
+  <div id="projectModal" class="project-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="project-modal-container">
+      <button class="modal-close-btn" aria-label="Close Project Modal">✕</button>
+      
+      <div class="modal-content-body">
+        
+        <div class="modal-media-wrap">
+          <svg viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+            <rect width="800" height="450" fill="#080a12"/>
+            <circle cx="400" cy="225" r="160" stroke="rgba(0, 240, 255, 0.25)" stroke-width="1.5" stroke-dasharray="8 8"/>
+            <circle cx="400" cy="225" r="80" stroke="rgba(139, 92, 246, 0.4)" stroke-width="2"/>
+            <line x1="200" y1="225" x2="600" y2="225" stroke="rgba(255, 255, 255, 0.1)"/>
+            <text x="400" y="230" fill="#00f0ff" font-family="monospace" font-size="14" text-anchor="middle" letter-spacing="6">[ HIGH-RES ARTIFACT INSPECTOR ]</text>
+          </svg>
+        </div>
+
+        <div class="modal-details-grid">
+          
+          <div class="modal-narrative">
+            <div id="modalCategory" class="project-category">Category</div>
+            <h3 id="modalTitle">Project Title</h3>
+            <p id="modalDescription">Detailed narrative and architectural breakdown of the build.</p>
+
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-highlight);">
+              KEY DELIVERABLES & OUTCOMES
+            </h4>
+            <ul id="modalDeliverables" style="padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.8;"></ul>
+          </div>
+
+          <div class="modal-sidebar-info">
+            <div class="modal-info-block">
+              <div class="label">ROLE</div>
+              <div id="modalRole" class="val">Lead Architect</div>
+            </div>
+            <div class="modal-info-block">
+              <div class="label">YEAR</div>
+              <div id="modalYear" class="val">2026</div>
+            </div>
+            <div class="modal-info-block">
+              <div class="label">TECH STACK</div>
+              <div id="modalTech" class="project-tech-stack" style="margin-top: 0.4rem;"></div>
+            </div>
+            <div class="modal-info-block" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
+              <a id="modalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 0.6rem 1rem; font-size: 0.75rem;">
+                <span>View Live Deployment ↗</span>
+              </a>
+              <a id="modalCodeLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.75rem;">
+                <span>Source Repository ↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================================
+       Command Palette Modal (Ctrl + K)
+       ==================================================================== -->
+  <div id="commandPalette" class="command-palette-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="command-palette-box">
+      
+      <div class="command-search-wrap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="commandInput" class="command-search-input" placeholder="Type a command or jump to section..." autocomplete="off">
+        <kbd class="cmd-kbd">ESC</kbd>
+      </div>
+
+      <div class="command-list">
+        <div class="command-item" data-action="navigate" data-target="#hero">
+          <div class="command-item-left">
+            <span style="color: var(--accent-cyan);">⌂</span>
+            <span>Jump to Hero / Top</span>
+          </div>
+          <span class="command-tag">SECTION</span>
+        </div>
+
+        <div class="command-item" data-action="navigate" data-target="#about">
+          <div class="command-item-left">
+            <span style="color: var(--accent-cyan);">◈</span>
+            <span>About Me & Philosophy</span>
+          </div>
+          <span class="command-tag">SECTION</span>
+        </div>
+
+        <div class="command-item" data-action="navigate" data-target="#work">
+          <div class="command-item-left">
+            <span style="color: var(--accent-cyan);">❖</span>
+            <span>Featured Works & Case Studies</span>
+          </div>
+          <span class="command-tag">SECTION</span>
+        </div>
+
+        <div class="command-item" data-action="navigate" data-target="#channels">
+          <div class="command-item-left">
+            <span style="color: var(--accent-cyan);">✦</span>
+            <span>Content Channels & Social Hub</span>
+          </div>
+          <span class="command-tag">SECTION</span>
+        </div>
+
+        <div class="command-item" data-action="navigate" data-target="#contact">
+          <div class="command-item-left">
+            <span style="color: var(--accent-cyan);">✉</span>
+            <span>Initiate Direct Transmission</span>
+          </div>
+          <span class="command-tag">SECTION</span>
+        </div>
+
+        <div class="command-item" data-action="copy-email">
+          <div class="command-item-left">
+            <span style="color: var(--accent-emerald);">📋</span>
+            <span>Copy Direct Email Address</span>
+          </div>
+          <span class="command-tag">ACTION</span>
+        </div>
+
+        <div class="command-item" data-action="toggle-audio">
+          <div class="command-item-left">
+            <span style="color: var(--accent-violet);">♫</span>
+            <span>Toggle Cyber Ambient Audio</span>
+          </div>
+          <span class="command-tag">AUDIO</span>
+        </div>
+      </div>
+
+      <div class="command-footer">
+        <span>Use navigation keys or click to select</span>
+        <span>asitis.sourav // HUD v2.6</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Toast Notice Notification -->
+  <div class="toast-notice" role="alert" aria-live="polite"></div>
+
+  <!-- Primary Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
